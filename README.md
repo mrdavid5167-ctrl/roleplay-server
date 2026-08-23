@@ -1,28 +1,23 @@
-# Simple RP Server
+# RP3D Complete Game + Server
 
-A basic online multiplayer roleplay server.
+This version is configured to connect to the Render server:
 
-## Features
+https://roleplay-server-gog2.onrender.com
 
-- Player connections
-- Player names
-- Real-time movement
-- Multiplayer chat
-- Works with Render
-- Uses WebSocket
+The game includes the 3D character, city, cars, enter/exit, shop/interior,
+buying system, multiplayer synchronization, and Node.js/Socket.IO server.
 
-## Run
-
+## Local project
+Run:
 npm install
-
 npm start
 
-## Render
+## Important
+The client is already configured to connect to the Render server above.
+The Render service must remain deployed for online multiplayer.
 
-Build command:
+## Test
+Open:
+https://roleplay-server-gog2.onrender.com/api/health
 
-npm install
-
-Start command:
-
-npm start
+A healthy response should contain `ok: true`.
