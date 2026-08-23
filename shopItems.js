@@ -1,0 +1,1 @@
+export const shopItems=[{name:'Water',price:20},{name:'Food',price:50},{name:'Medkit',price:100}];
