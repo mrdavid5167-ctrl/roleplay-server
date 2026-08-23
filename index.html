@@ -1,1 +1,24 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>RP3D Online</title><style>html,body{margin:0;height:100%;overflow:hidden}#game{width:100%;height:100%}#ui{position:fixed;inset:0;pointer-events:none}button{pointer-events:auto;padding:13px;border:0;border-radius:12px}#controls{position:absolute;right:15px;bottom:18px;display:flex;gap:8px}#status{position:absolute;left:12px;top:12px;background:#0009;color:white;padding:9px;border-radius:9px}#shop{display:none;pointer-events:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fffe;padding:20px;border-radius:16px;min-width:230px}#shop button{display:block;width:100%;margin:7px 0}</style></head><body><canvas id="game"></canvas><div id="ui"><div id="status">Connecting...</div><div id="controls"><button id="enterBtn">ENTER / EXIT</button><button id="shopBtn">SHOP</button></div><div id="shop"><h2>Small Shop</h2><p id="money">Money: $500</p><button data-item="Water" data-price="20">Buy Water - $20</button><button data-item="Food" data-price="50">Buy Food - $50</button><button data-item="Medkit" data-price="100">Buy Medkit - $100</button><button id="closeShop">Close</button></div></div><script type="module" src="/src/main.js"></script></body></html>
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>RP3D Online</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#111;font-family:Arial}
+#game{width:100%;height:100%;display:block;touch-action:none}
+#status,#players{position:fixed;left:10px;padding:7px 10px;background:#0009;color:white;border-radius:8px;z-index:5;font-size:13px}
+#status{top:10px}#players{top:45px}
+#controls{position:fixed;left:15px;bottom:18px;display:grid;grid-template-columns:58px 58px 58px;gap:6px;z-index:5}
+button{width:58px;height:52px;border:0;border-radius:12px;background:#ffffff38;color:white;font-size:20px}
+#up{grid-column:2}.empty{visibility:hidden}
+</style></head><body>
+<canvas id="game"></canvas><div id="status">Connecting...</div><div id="players">Players: 0</div>
+<div id="controls">
+<button class="empty"></button><button id="up">▲</button><button class="empty"></button>
+<button id="left">◀</button><button id="down">▼</button><button id="right">▶</button>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script>
+<script type="module" src="./network.js"></script>
+<script type="module" src="./game.js"></script>
+</body></html>
