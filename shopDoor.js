@@ -1,1 +1,1 @@
-import * as THREE from 'three';export function createShopDoor(scene,shop){const d=new THREE.Mesh(new THREE.BoxGeometry(2.2,3,.2),new THREE.MeshStandardMaterial({color:0x336699}));d.position.set(-12,1.5,-8);d.userData.shop=shop;scene.add(d);return d}
+export function createShopDoor(s,shop){const d=new THREE.Mesh(new THREE.BoxGeometry(2.2,3,.2),new THREE.MeshStandardMaterial({color:0x336699}));d.position.set(-12,1.5,-8);s.add(d);return d}
