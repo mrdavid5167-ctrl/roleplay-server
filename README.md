@@ -1,1 +1,1 @@
-# Server\nExpress + Socket.IO multiplayer server. Provides player connections, movement synchronization, join/leave events, server-side money and shop purchases, plus /api/health. Deploy the Node server publicly for players on different networks.
+Render: Build Command = npm install; Start Command = node server.js. Health: /api/health
